@@ -1,236 +1,278 @@
-:root {
-            --primary-color: #2A2A2A;
-            --accent-color: #FF6B6B;
-            --text-color: #333;
-            --bg-light: #F9F9F9;
-        }
+.HomePageDesktop {
+	position: relative;
+	background: #070708;
+	flex-direction: column;
+	display: flex;
+	width: 100vw; /* 100% ширини вікна */
+    min-height: 100vh; /* 100% висоти вікна */
+    margin: 0; /* Видаляємо зовнішні відступи */
+    padding: 0; /* Видаляємо внутрішні відступи */
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
+.Header {
+	height: 100px;
+	padding: 0 125px;
+	left: 0px;
+	top: 0px;
+	border-bottom: 1px #1C1C21 solid;
+	display: flex;
+}
+    
+.Navbar {
+	padding-left: 40px;
+	padding-right: 40px; 
+	padding-top: 30px; 
+	border-left: 1px #1C1C21 solid; 
+	border-right: 1px #1C1C21 solid;
+	flex-grow: 1;
+	display: inline-flex;
+	justify-content: space-between;
+}  
 
-        /* Header Styles */
-        header {
-            padding: 20px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: white;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+.NavbarButtonsContainer {
+	border-top-left-radius: 12px; 
+	border-top-right-radius: 12px; 
+	overflow: hidden; 
+	border-left: 1px #1C1C21 solid; 
+	border-top: 1px #1C1C21 solid; 
+	border-right: 1px #1C1C21 solid; 
+	justify-content: flex-start; 
+	align-items: center; 
+	display: flex;
+}
 
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-        }
+.NavbarButton {
+	padding-left: 50px; 
+	padding-right: 50px; 
+	padding-top: 30px; 
+	padding-bottom: 30px; 
+	border: 1px #1C1C21 solid; 
+	justify-content: flex-start; 
+	align-items: center; 
+	gap: 10px; 
+	display: flex;
+	cursor: pointer;
+	transition: all 0.3s;
+	color: #AFB0B6; 
+}
 
-        .contact-btn {
-            padding: 10px 25px;
-            background: var(--accent-color);
-            color: white;
-            border: none;
-            cursor: pointer;
-            border-radius: 25px;
-            transition: 0.3s;
-        }
+.NavbarButton.active {
+    background: #131316; /* Активний фон */
+    color: white;        /* Активний текст */
+ }
+  
+  /* Ховер-ефект для неактивних кнопок */
+.NavbarButton:not(.active):hover {
+    background: #131316;
+    color: white;
+}
 
-        .contact-btn:hover {
-            transform: scale(1.05);
-        }
+.Text {
+	font-size: 18px; 
+	font-family: Manrope; 
+	font-weight: 500; 
+	line-height: 27px; 
+	word-wrap: break-word
+}
 
-        /* Hero Section */
-        .hero {
-            margin-top: 150px;
-            padding: 50px;
-            text-align: center;
-        }
+.Button {
+	margin-bottom: 20px;
+	padding-left: 24px; 
+	padding-right: 24px; 
+	padding-top: 16px; 
+	padding-bottom: 16px; 
+	background: #1C1C21; 
+	border-radius: 10px; 
+	overflow: hidden; 
+	border: 1px #2F2F37 solid; 
+	justify-content: flex-start; 
+	align-items: center; 
+	gap: 10px; 
+	display: flex;
+	color: white;
+	cursor: pointer; /* Додаємо курсор-указівник */
+    transition: background 0.3s; /* Плавна анімація */
+}
 
-        .hero h3 {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-        }
+.Button:hover {
+    background: #ff6347;
+}
+ 
+.Container {
+	left: 162px;
+	position: relative; 
+	flex-direction: column; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	gap: 80px;
+	display: inline-flex
+}
 
-        .hero h1 {
-            font-size: 4rem;
-            margin: 20px 0;
-            color: var(--primary-color);
-        }
+.SubContainer {
+	align-self: stretch; 
+	padding-bottom: 50px; 
+	border-bottom: 1px #1C1C21 solid; 
+	justify-content: flex-start; 
+	align-items: center; 
+	gap: 20px; 
+	display: inline-flex
+}
 
-        .arrow-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: none;
-            border: none;
-            cursor: pointer;
-            font-size: 1.2rem;
-            color: var(--primary-color);
-        }
+.TextContainer {
+	flex: 1 1 0; 
+	flex-direction: column; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	gap: 4px; 
+	display: inline-flex
+}
 
-        /* Skills Row */
-        .skills {
-            height: 80px;
-            background: var(--bg-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            margin: 50px 0;
-            flex-wrap: wrap;
-        }
+.TextTopic {
+	align-self: stretch; 
+	color: #797C86; 
+	font-size: 20px; 
+	font-family: Manrope; 
+	font-weight: 600; 
+	text-transform: uppercase; 
+	word-wrap: break-word
+}
 
-        /* Image Grid */
-        .image-grid {
-            height: 512px;
-            position: relative;
-            margin: 0 50px;
-        }
+.Heading {
+	color: white; 
+	font-size: 58px; 
+	font-family: Manrope; 
+	font-weight: 600; 
+	text-transform: uppercase; 
+	word-wrap: break-word
+}
 
-        .image-grid img {
-            position: absolute;
-            width: 300px;
-            height: 400px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-        }
+.TopContainer {
+	flex-direction: column; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	display: inline-flex;
+	position: relative;
+}
 
-        .image-grid img:nth-child(1) {
-            left: 5%;
-            top: 10%;
-        }
+.TopSubContainer {
+	align-self: stretch;
+	padding-left: 8%;
+	padding-right: 8%;
+	padding-top: 80px; 
+	padding-bottom: 20px; 
+	border-top: 1px #1C1C21 solid; 
+	border-bottom: 1px #1C1C21 solid; 
+	justify-content: space-between; 
+	align-items: center; 
+	display: inline-flex;
+	position: relative;
+}
 
-        .image-grid img:nth-child(2) {
-            left: 30%;
-            top: 20%;
-            z-index: 2;
-        }
+.TopSubTextContainerLeftText {
+	flex-direction: column; 
+	justify-content: center; 
+	align-items: flex-start; 
+	gap: 10px; 
+	display: inline-flex;					
+}
 
-        .image-grid img:nth-child(3) {
-            left: 55%;
-            top: 15%;
-        }
+.TopHeader {
+	color: #62646C; 
+	font-size: 22px; 
+	font-family: Manrope; 
+	font-weight: 500; 
+	text-transform: uppercase; 
+	word-wrap: break-word;
+	z-index: 1;
+}
 
-        /* About Section */
-        .about {
-            margin: 200px 50px;
-            display: flex;
-            gap: 50px;
-            flex-wrap: wrap;
-        }
+.FullNameText {
+	color: #E4E4E6; 
+	font-size: 80px; 
+	font-family: Manrope; 
+	font-weight: 600; 
+	text-transform: uppercase; 
+	word-wrap: break-word;
+	z-index: 1;
+}
 
-        .about-content {
-            flex: 1;
-            padding: 30px;
-            background: var(--bg-light);
-            border-radius: 15px;
-        }
+.AbstractDesign {
+	position: absolute; /* Абсолютне позиціонування */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%; /* Займає всю висоту батьківського контейнера */
+    width: 100%; /* Займає всю ширину батьківського контейнера */
+    display: flex;
+    align-items: flex-start; /* Вирівнює по вертикалі по центру */
+    justify-content: center; /* Вирівнює по горизонталі по центру */
+    z-index: 0; /* Поміщає елемент під інші елементи */
+	pointer-events: none;
+}
 
-        .profile-img {
-            width: 400px;
-            height: 500px;
-            object-fit: cover;
-            border-radius: 15px;
-        }
+.AbstractDesign svg {
+    max-height: 100%;
+    width: auto;
+}
 
-        /* Portfolio Section */
-        .portfolio {
-            margin: 200px 50px;
-        }
+.LetsButton {
+    cursor: pointer; /* Змінює курсор на указівник */
+    transition: fill 0.3s; /* Плавна анімація зміни кольору */
+}
 
-        .portfolio-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 30px;
-        }
+.LetsButton:hover rect {
+    fill: #FF6347; /* Колір при наведенні */
+}
 
-        .carousel {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 30px;
-            height: 400px;
-            overflow: hidden;
-            transition: height 0.3s;
-        }
+.TopContainerRight {
+	flex-direction: column; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	gap: 10px; 
+	display: inline-flex;
+	z-index: 1;	
+}
 
-        .carousel.expanded {
-            height: auto;
-        }
+.TopSubTextContainerRightText {
+	justify-content: flex-start; 
+	align-items: center; 
+	gap: 10px; 
+	display: inline-flex
+}
 
-        .portfolio-item {
-            position: relative;
-        }
+.SkillsContainer {
+	display: flex; /* Використовуємо flex для горизонтального розташування */
+    flex-direction: row; /* Елементи в рядок */
+    white-space: nowrap; /* Забороняє перенесення на новий рядок */
+    width: 100%; /* Займає всю ширину батьківського контейнера */
+}
 
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
+.SkillContainer {
+	align-self: stretch; 
+	padding: 20px; 
+	background: #0E0E10; 
+	border-top: 1px #1C1C21 solid; 
+	border-bottom: 1px #1C1C21 solid; 
+	justify-content: flex-start; 
+	align-items: flex-start; 
+	gap: 20px; 
+	display: inline-flex;
+}
 
-        /* Footer */
-        footer {
-            background: var(--primary-color);
-            color: white;
-            padding: 50px;
-            text-align: center;
-        }
+.Skill {
+	justify-content: flex-start; 
+	align-items: center; 
+	gap: 10px; 
+	display: flex;
+}
 
-        .footer-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 20px 0;
-        }
-
-        /* Mobile Styles */
-        @media (max-width: 768px) {
-            header {
-                padding: 15px 20px;
-            }
-
-            nav {
-                display: none; /* Мобільне меню можна реалізувати через бургер */
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .image-grid {
-                margin: 0 20px;
-                height: auto;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .image-grid img {
-                position: static;
-                width: 100%;
-                height: 300px;
-            }
-
-            .about {
-                margin: 100px 20px;
-                flex-direction: column;
-            }
-
-            .profile-img {
-                width: 100%;
-            }
-
-            .carousel {
-                grid-template-columns: 1fr;
-            }
-        }
+.SkillText {
+	color: #D6D0FB; 
+	font-size: 18px; 
+	font-family: Manrope; 
+	font-weight: 400; 
+	text-transform: uppercase; 
+	line-height: 27px; 
+	word-wrap: break-word;		
+}
