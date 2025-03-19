@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body class="font-[Poppins]">
     <!-- Header -->
@@ -30,7 +31,11 @@
         <div class="container mx-auto px-6 text-center">
             <h1 class="text-5xl font-bold mb-6">Tymur Perepelytsia</h1>
             <p class="text-xl mb-8">Full Stack Developer | Turning ideas into digital reality</p>
-            <button class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition">Let's Work Together</button>
+			<a href="mailto:hello@tymur.dev?subject=Collaboration Proposal" 
+   class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full 
+          hover:scale-105 transition-transform shadow-lg">
+    Let's Work Together
+</a>
             
             <div class="skills-marquee mt-12 overflow-hidden">
                 <div class="marquee-content flex space-x-8">
@@ -260,6 +265,32 @@
                         </div>
                     </div>
                 </div>
+				
+				<!-- Project 5 -->
+				<div class="swiper-slide">
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all 
+                hover:shadow-2xl hover:-translate-y-2 group">
+        <div class="relative overflow-hidden">
+            <img src="assets/images/project5.png" 
+                 class="w-full h-64 object-cover transition-transform duration-500 
+                        group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+        </div>
+        <div class="p-6">
+            <h3 class="text-xl font-bold mb-2">E-Commerce Platform</h3>
+            <div class="flex items-center text-sm text-gray-500 mb-4">
+                <i class="fas fa-calendar-alt mr-2"></i>
+                <span>March 2024</span>
+            </div>
+            <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 
+                             font-medium group">
+                View Project
+                <i class="fas fa-arrow-right ml-2 transition-transform 
+                          group-hover:translate-x-1"></i>
+            </a>
+        </div>
+    </div>
+</div>
 
                 <!-- Add more projects as needed -->
             </div>
@@ -285,10 +316,11 @@
             </div>
             
             <h3 class="text-3xl font-bold mb-6">Let's Build Something Amazing</h3>
-            <button class="bg-blue-600 text-white px-8 py-3 rounded-full 
-                          hover:bg-blue-700 transition mb-8">
-                Start Collaboration
-            </button>
+            <a href="mailto:hello@tymur.dev?subject=Project Inquiry" 
+   class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-3 rounded-full 
+          hover:scale-105 transition-transform shadow-lg">
+    Start Collaboration
+</a>
         </div>
 
         <div class="border-t border-gray-800 pt-8">
@@ -326,5 +358,13 @@
 <script src="https://kit.fontawesome.com/3567cf9165.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="scripts/app.js"></script>
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 800,
+        once: true,
+        easing: 'ease-out-quart'
+    });
+</script>
 </body>
 </html>

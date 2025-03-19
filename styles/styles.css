@@ -62,3 +62,33 @@ footer .skills-marquee span {
 footer a {
     transition: color 0.3s ease;
 }
+
+.swiper {
+    padding: 40px 0 60px !important;
+    overflow: visible !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    top: auto !important;
+    bottom: 0 !important;
+    width: 48px !important;
+    height: 48px !important;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.swiper-button-prev {
+    left: calc(50% - 60px) !important;
+}
+
+.swiper-button-next {
+    right: calc(50% - 60px) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 1.2rem !important;
+    color: #4f46e5;
+}
