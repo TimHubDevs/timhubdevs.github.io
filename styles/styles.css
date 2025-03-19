@@ -1,0 +1,64 @@
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.skills-marquee {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+}
+
+.marquee-content span {
+    display: inline-block;
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    color: #4f46e5;
+    font-weight: 500;
+}
+
+.nav-link {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4f46e5;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.social-btn {
+    @apply w-12 h-12 rounded-full bg-gray-100 flex items-center justify-center hover:bg-blue-600 hover:text-white transition;
+}
+
+.swiper {
+    padding: 40px 0;
+}
+
+.swiper-slide {
+    @apply bg-white rounded-xl shadow-lg p-8;
+}
+
+footer .skills-marquee span {
+    color: #818cf8;
+    font-size: 1.1rem;
+}
+
+footer a {
+    transition: color 0.3s ease;
+}
