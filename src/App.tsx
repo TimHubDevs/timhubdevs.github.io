@@ -3,6 +3,7 @@ import HobbEduCard from './components/HobbEduCard';
 import EverMergeCard from './components/EverMergeCard';
 import FoguetinhoCard from './components/FoguetinhoCard';
 import { projects } from './data/projects';
+import {studentsProjects} from './data/students-projects';
 import GameCard from './components/GameCard';
 
 function App() {
@@ -37,9 +38,21 @@ function App() {
             </section>
 
             <section className="mb-20">
-                <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">Projects</h2>
+                <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">
+                    My Projects
+                </h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map(project => (
+                        <GameCard key={project.id} data={project} />
+                    ))}
+                </div>
+            </section>
+            <section className="mb-20">
+                <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">
+                    My Students Projects
+                </h2>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {studentsProjects.map(project => (
                         <GameCard key={project.id} data={project} />
                     ))}
                 </div>
