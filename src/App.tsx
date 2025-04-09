@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import HobbEduCard from './components/HobbEduCard';
 import EverMergeCard from './components/EverMergeCard';
 import FoguetinhoCard from './components/FoguetinhoCard';
-import { projects } from './data/projects';
+import {projects} from './data/projects';
 import {studentsProjects} from './data/students-projects';
 import GameCard from './components/GameCard';
+import BreathingWavesSection from './components/BreathingWavesSection';
 
 function App() {
     const [darkMode, setDarkMode] = useState(true);
@@ -43,24 +44,27 @@ function App() {
                 </h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map(project => (
-                        <GameCard key={project.id} data={project} />
+                        <GameCard key={project.id} data={project}/>
                     ))}
                 </div>
             </section>
+
+
             <section className="mb-20">
                 <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">
                     My Students Projects
                 </h2>
                 <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {studentsProjects.map(project => (
-                        <GameCard key={project.id} data={project} />
+                        <GameCard key={project.id} data={project}/>
                     ))}
                 </div>
             </section>
 
             <section className="text-center">
                 <h2 className="text-2xl font-bold text-cyan-400 mb-2">Let’s Connect</h2>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">I’m always open to collaboration, remote work, or freelance projects.</p>
+                <p className="text-gray-600 dark:text-gray-300 mb-4">I’m always open to collaboration, remote work, or
+                    freelance projects.</p>
                 <a
                     href="mailto:your@email.com"
                     className="bg-cyan-500 hover:bg-cyan-600 text-white px-6 py-3 rounded-full font-semibold transition"
@@ -68,6 +72,8 @@ function App() {
                     Contact Me
                 </a>
             </section>
+            <BreathingWavesSection/>
+            
         </main>
     );
 }
