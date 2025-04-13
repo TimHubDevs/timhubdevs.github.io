@@ -13,10 +13,10 @@ export const studentsProjects = [
     technologies: 'PC, Unity, C#',
     date: 'Jul 2024',
     platformsTile: {
-      web: 'https://devstim.itch.io/dark-age',
+      pc: 'https://devstim.itch.io/dark-age',
     },
     platformsCard: {
-      web: 'https://devstim.itch.io/dark-age',
+      itchio: 'https://devstim.itch.io/dark-age',
     },
   },
   {
@@ -29,10 +29,10 @@ export const studentsProjects = [
     technologies: 'PC, C#, Unity',
     date: 'May 2024',
     platformsTile: {
-      web: 'https://ishakgames.itch.io/lostincameras',
+      pc: 'https://ishakgames.itch.io/lostincameras',
     },
     platformsCard: {
-      web: 'https://ishakgames.itch.io/lostincameras',
+      itchio: 'https://ishakgames.itch.io/lostincameras',
     },
   },
   {

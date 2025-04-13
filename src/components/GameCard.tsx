@@ -24,6 +24,7 @@ type PlatformLinks = {
     playStore?: string;
     steam?: string;
     itchio?: string;
+    pc?: string;
 };
 
 type GameCardProps = {
@@ -97,6 +98,12 @@ const GameCard: React.FC<{ data: GameCardProps['data'] }> = ({data}) => {
                               className="flex items-center gap-2 bg-neutral-100 border border-gray-400 hover:bg-blue-200 text-black hover:shadow hover:scale-105 px-4 py-2 rounded-full text-sm transition dark:border-none">
                             <img src={steamIcon} alt="Steam Icon" className="w-5 h-5"/>
                             Steam</a>}
+                    {data.platformsTile.pc
+                        && <a href={data.platformsTile.pc} target="_blank"
+                              rel="noopener noreferrer"
+                              className="flex items-center gap-2 bg-indigo-500 border  hover:bg-indigo-600 text-white hover:shadow hover:scale-105 px-4 py-2 rounded-full text-sm transition dark:border-none">
+                            <img src={pcIcon} alt="PC Icon" className="w-5 h-5"/>
+                            PC</a>}
                     <button
                         onClick={() => setShowModal(true)}
                         className="bg-cyan-500 hover:bg-cyan-600 hover:shadow hover:scale-105 text-white px-4 py-2 rounded-full transition text-sm">
