@@ -8,16 +8,18 @@ import segaLogo from './assets/logos/sega.png';
 function App() {
 
     return (
-        <main className=" bg-white text-black dark:bg-black dark:text-white font-sans min-h-screen">
-            <div className="under-top-nav">
-                <div className="top-bg-wrap">
-                    <div className="top-content">
-                        <div>
-                            <RotatingCube />
-                        </div>
-                        <div className="top-inner-block">
-                            <h1>
-                                I Make Games With <span>Passion & Code</span>
+        <main>
+            <div className="relative overflow-hidden z-[7]">
+                <div className="w-full relative h-[1200px] xx:h-[1600px] from-[#b721ff] to-[#21d4fd] bg-hero-gradient">
+                    <div className="max-w-[2000px] mx-auto relative">
+                        <RotatingCube/>
+                        <div className="w-[700px] px-[64px] pt-[100px] pb-[100px] sm:p-[32px] xl:w-[500px] xl:px-0 xl:pt-[64px] xl:pb-0 xl:mx-auto">
+                            <h1 className="text-[2.2rem] sm:text-[2.6rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] sm:mb-[10px] md:mb-[30px] xl:mb-[40px] md:mt-[30px] font-bold leading-[80%] tracking-tight text-black text-left uppercase">
+                                I MAKE GAMES WITH
+                                    <br/>
+                                <span className="text-red-600 block text-[5.6rem] leading-[90%]">
+                                PASSION &<br/>CODE
+                                </span>
                             </h1>
                             <p>
                                 I'm a game developer focused on building engaging, meaningful, and technically sound games. I love turning ideas into interactive experiences.
@@ -32,15 +34,12 @@ function App() {
                                     <span>See My Projects</span>
                                 </a>
                             </div>
-
-                            
                         </div>
-                        
                     </div>
-
                 </div>
+                <div className="top-slant absolute w-[300vw] h-[1200px] top-[860px] left-[-100vw] skew-y-[3deg] shadow-[0px_-1px_1px_0px_rgb(255,255,255)] bg-white z-0"></div>
             </div>
-            
+
 
             <header className="text-center mb-16 mt-10">
                 <h1 className="text-5xl font-bold text-cyan-500 mb-4">Hi, I’m a Game Developer</h1>
@@ -58,10 +57,10 @@ function App() {
                 <div className="logos-wrap ">
                     <h2>Inspired by the best</h2>
                     <ul className="logos ">
-                        <li><img src="/logos/ea.png" alt="EA logo" /></li>
-                        <li><img src={segaLogo} alt="SEGA logo" /></li>
-                        <li><img src="/logos/zynga.png" alt="Zynga logo" /></li>
-                        <li><img src="/logos/king.png" alt="King logo" /></li>
+                        <li><img src="/logos/ea.png" alt="EA logo"/></li>
+                        <li><img src={segaLogo} alt="SEGA logo"/></li>
+                        <li><img src="/logos/zynga.png" alt="Zynga logo"/></li>
+                        <li><img src="/logos/king.png" alt="King logo"/></li>
                     </ul>
                 </div>
             </section>
