@@ -1,10 +1,10 @@
 export default function RotatingCube() {
     return (
         <div className=" w-[300px] h-[300px] perspective-[800px] z-[3]
-    absolute top-[100px] left-[20px]
-    sm:w-[400px] sm:h-[400px] sm:left-[60px]
-    md:w-[500px] md:h-[500px] md:left-[100px]
-    xl:w-[600px] xl:h-[600px] xl:left-[200px]
+    relative
+    sm:w-[400px] sm:h-[400px]
+    md:w-[500px] md:h-[500px]
+    xl:w-[600px] xl:h-[600px]
 ">
             <div className="w-full h-full relative [transform-style:preserve-3d] animate-rotate">
                 <div

@@ -11,9 +11,9 @@ import pcIcon from '../assets/icons/pc.svg';
 import webpIcon from '../assets/icons/webp.svg';
 
 type PlatformIconLinks = {
-    mobile?: string;
-    pc?: string;
-    web?: string;
+    mobile?: boolean;
+    pc?: boolean;
+    web?: boolean;
 };
 
 type PlatformLinks = {
