@@ -1,11 +1,63 @@
+import {useState, useEffect, useRef} from 'react';
 import {projects} from './data/projects';
 import {studentsProjects} from './data/students-projects';
 import GameCard from './components/GameCard';
 import RotatingCube from './components/RotatingCube';
 import BreathingWavesSection from './components/BreathingWavesSection';
 import segaLogo from './assets/logos/sega.png';
+import gamirareLogo from './assets/logos/GamirareLogo.png';
+import nixLogo from './assets/logos/nix.svg';
+import pingleLogo from './assets/logos/pingle.svg';
+import flaimLogo from './assets/logos/Flaim.png';
+import paradoxLogo from './assets/logos/paradox.svg';
 
 function App() {
+    const carouselRef = useRef<HTMLUListElement>(null);
+    const [position, setPosition] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    
+    const logos = [
+        { src: nixLogo, alt: 'Nix logo', className: 'h-8 w-auto' },
+        { src: paradoxLogo, alt: 'Paradox logo', className: 'h-14 w-auto' },
+        { src: flaimLogo, alt: 'Flaim logo', className: 'h-8 w-auto' },
+        { src: segaLogo, alt: 'SEGA logo', className: 'h-8 w-auto' },
+        { src: pingleLogo, alt: 'Pingle logo', className: 'h-14 w-auto' },
+        { src: gamirareLogo, alt: 'Gamirare logo', className: 'h-24 w-auto' },
+        { src: 'https://goiteens.com/app/uploads/2025/10/goiteens_logo_bc_ybg.svg', alt: 'GoITeens', className: 'h-8 w-auto' },
+    ];
+    
+    // Duplicate logos for infinite scroll effect
+    const duplicatedLogos = [...logos, ...logos];
+
+    useEffect(() => {
+        let animationFrameId: number;
+        let lastTime = performance.now();
+        const speed = 0.15; // pixels per millisecond (slower speed)
+
+        const animate = (currentTime: number) => {
+            const deltaTime = currentTime - lastTime;
+            lastTime = currentTime;
+
+            if (!isPaused) {
+                setPosition(prev => {
+                    const newPosition = prev - speed * deltaTime;
+                    const carouselWidth = carouselRef.current?.scrollWidth || 0;
+                    const halfWidth = carouselWidth / 2;
+
+                    // Reset to 0 when we've scrolled past the first half
+                    if (newPosition <= -halfWidth) {
+                        return newPosition + halfWidth;
+                    }
+                    return newPosition;
+                });
+            }
+
+            animationFrameId = requestAnimationFrame(animate);
+        };
+
+        animationFrameId = requestAnimationFrame(animate);
+        return () => cancelAnimationFrame(animationFrameId);
+    }, [isPaused]);
 
     const handleScrollToProjects = (e: React.MouseEvent<HTMLAnchorElement>) => {
         e.preventDefault();
@@ -45,6 +97,7 @@ function App() {
                     <div className="max-w-[2000px] mx-auto relative flex flex-col lg:flex-row items-center lg:items-start">
                         <div className="order-2 lg:order-1">
                             <RotatingCube/>
+                        
                         </div>
                         <div className="order-1 lg:order-2 w-[700px] px-[64px] pt-[100px] pb-[100px] sm:p-[32px] xl:w-[500px] xl:px-0 xl:pt-[64px] xl:pb-0 xl:mx-auto lg:ml-8">
                             <h1 className="text-[2.2rem] sm:text-[2.6rem] md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem] sm:mb-[10px] md:mb-[30px] xl:mb-[40px] md:mt-[30px] font-bold leading-[80%] tracking-tight text-black text-left uppercase">
@@ -59,23 +112,25 @@ function App() {
                             </p>
 
                             <div className="top-buttons">
-                                <a className="open-demo" href="#play-latest">
-                                    <img src="/icons/gamepad.svg" alt="gamepad icon" width="32" height="32" />
+                                <a className="open-demo" href="https://store.steampowered.com/app/1385380/Across_the_Obelisk/" target="_blank" rel="noopener noreferrer">
                                     <span>Play Latest Game</span>
                                 </a>
                                 <a className="open-demo" href="#projects" onClick={handleScrollToProjects}>
-                                    <span>See My Projects</span>
+                                    <span>View My Work</span>
                                 </a>
                             </div>
 
                             <div className="logos-wrap mt-8 lg:mt-12 lg:block hidden">
                                 <h2 className="text-sm font-semibold text-gray-700 mb-4">Worked with the best</h2>
-                                <ul className="logos flex gap-6 flex-wrap justify-start">
-                                    <li><img src="/logos/ea.png" alt="EA logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                    <li><img src={segaLogo} alt="SEGA logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                    <li><img src="/logos/zynga.png" alt="Zynga logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                    <li><img src="/logos/king.png" alt="King logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                </ul>
+                                <div className="logo-fade-container" onMouseEnter={() => setIsPaused(true)} onMouseLeave={() => setIsPaused(false)}>
+                                    <ul ref={carouselRef} className="logo-carousel gap-6" style={{ transform: `translateX(${position}px)` }}>
+                                        {duplicatedLogos.map((logo, index) => (
+                                            <li key={index} className="flex-shrink-0">
+                                                <img src={logo.src} alt={logo.alt} className={`${logo.className} opacity-70 hover:opacity-100 transition`}/>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                         <div className="order-3 lg:hidden px-8 pb-8">

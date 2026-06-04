@@ -13,7 +13,7 @@ export default function RotatingCube() {
                     lg:cube-face-front-lg
                     md:cube-face-front-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="https://construct-static.com/videos/v1481/construct3/tnp.mp4" type="video/mp4"/>
+                        <source src="/src/assets/videos/fire.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div
@@ -22,7 +22,7 @@ export default function RotatingCube() {
                     lg:cube-face-back-lg
                     md:cube-face-back-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="https://construct-static.com/videos/v1481/construct3/goose.mp4" type="video/mp4"/>
+                        <source src="/src/assets/videos/Across-The-Obelisk.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div
@@ -31,7 +31,7 @@ export default function RotatingCube() {
                     lg:cube-face-right-lg
                     md:cube-face-right-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="https://construct-static.com/videos/v1481/homepage/boss.mp4" type="video/mp4"/>
+                        <source src="/src/assets/videos/Football.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div
@@ -40,8 +40,7 @@ export default function RotatingCube() {
                     lg:cube-face-left-lg
                     md:cube-face-left-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="https://construct-static.com/videos/v1481/homepage/kiwi-edit.mp4"
-                                type="video/mp4"/>
+                        <source src="/src/assets/videos/EverMerge.mp4" type="video/mp4"/>
                     </video>
                 </div>
             </div>

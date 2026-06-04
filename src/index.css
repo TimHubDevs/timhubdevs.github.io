@@ -116,8 +116,21 @@ h1, h2, .hero-title {
 }
 
 .logos img {
-    height: 32px;
     width: auto;
+}
+
+.logo-carousel {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    height: 96px;
+}
+
+.logo-fade-container {
+    position: relative;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
 }
 
 @layer components {
@@ -126,20 +139,11 @@ h1, h2, .hero-title {
         box-shadow: 0px 20px 30px -10px rgba(38, 57, 77, 0.8);
     }
 
-    .frontFace video {
-        @apply w-[212%] h-[212%] relative top-[-53%] left-[-53%] max-w-none;
-    }
-
-    .backFace video {
-        @apply w-[200%] h-[200%] relative top-[-50%] max-w-none;
-    }
-
-    .rightFace video {
-        
-    }
-
+    .frontFace video,
+    .backFace video,
+    .rightFace video,
     .leftFace video {
-        
+        @apply w-full h-full absolute top-0 left-0 object-cover;
     }
 }
 
