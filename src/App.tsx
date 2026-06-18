@@ -1,6 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
 import {projects} from './data/projects';
 import {studentsProjects} from './data/students-projects';
+import {sitesProjects} from './data/sites-projects';
 import GameCard from './components/GameCard';
 import RotatingCube from './components/RotatingCube';
 import BreathingWavesSection from './components/BreathingWavesSection';
@@ -161,6 +162,16 @@ function App() {
                 </div>
             </section>
 
+            <section className="p-6 md:p-10 mb-20">
+                <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">
+                    My Sites
+                </h2>
+                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    {sitesProjects.map(project => (
+                        <GameCard key={project.id} data={project}/>
+                    ))}
+                </div>
+            </section>
 
             <section className=" p-6 md:p-10 mb-20">
                 <h2 className="text-3xl font-bold text-cyan-400 mb-6 text-center">

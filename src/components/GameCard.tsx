@@ -9,11 +9,14 @@ import itchioIcon from '../assets/icons/itchio.svg';
 import mobileIcon from '../assets/icons/mobile-phone.svg';
 import pcIcon from '../assets/icons/pc.svg';
 import webpIcon from '../assets/icons/webp.svg';
+import vrIcon from '../assets/icons/vr.svg';
+import githubIcon from '../assets/icons/github.svg';
 
 type PlatformIconLinks = {
     mobile?: boolean;
     pc?: boolean;
     web?: boolean;
+    vr?: boolean;
 };
 
 type PlatformLinks = {
@@ -25,6 +28,7 @@ type PlatformLinks = {
     steam?: string;
     itchio?: string;
     pc?: string;
+    github?: string;
 };
 
 type GameCardProps = {
@@ -34,6 +38,7 @@ type GameCardProps = {
         fullDescription: string;
         platforms: PlatformIconLinks;
         image: string;
+        detailImage?: string;
         technologies: string;
         date: string;
         platformsTile: PlatformLinks;
@@ -57,6 +62,9 @@ const GameCard: React.FC<{ data: GameCardProps['data'] }> = ({data}) => {
                     }
                     {data.platforms.web
                         && <img src={webpIcon} alt="webIcon" className="w-10 h-10 "/>
+                    }
+                    {data.platforms.vr
+                        && <img src={vrIcon} alt="vrIcon" className="w-10 h-10 "/>
                     }
                 </div>
                 <img
@@ -157,7 +165,10 @@ const GameCard: React.FC<{ data: GameCardProps['data'] }> = ({data}) => {
             {showModal && (
                 <div className="fixed inset-0 z-50 px-4 flex items-center justify-center">
                     {/* напівпрозорий фон */}
-                    <div className="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm animate-fadeIn"></div>
+                    <div 
+                        className="absolute inset-0 bg-black bg-opacity-80 backdrop-blur-sm animate-fadeIn"
+                        onClick={() => setShowModal(false)}
+                    ></div>
 
                     {/* модальне вікно — ТУТ, на одному рівні з фоном */}
                     <div
@@ -170,7 +181,7 @@ const GameCard: React.FC<{ data: GameCardProps['data'] }> = ({data}) => {
                         </button>
                         <h2 className="text-2xl font-bold text-cyan-500 mb-4">{data.title}</h2>
                         <img
-                            src={data.image} alt={data.title}
+                            src={data.detailImage ?? data.image} alt={data.title}
                             className="rounded mb-4 w-full object-cover"
                         />
                         <p className="text-gray-700 dark:text-gray-300 mb-2">
@@ -213,6 +224,13 @@ const GameCard: React.FC<{ data: GameCardProps['data'] }> = ({data}) => {
                                     href={data.platformsCard.itchio} target="_blank" rel="noopener noreferrer"
                                     className="flex items-center gap-2 bg-white border border-gray-400 hover:bg-blue-300 hover:shadow hover:scale-105 text-black px-4 py-2 rounded-full text-sm transition dark:border-none">
                                     Download on <img src={itchioIcon} alt="steam Icon" className="w-14 h-5"/>
+                                </a>}
+                            {data.platformsCard.github
+                                && <a
+                                    href={data.platformsCard.github} target="_blank" rel="noopener noreferrer"
+                                    className="flex items-center gap-2 bg-white border border-gray-400 hover:bg-gray-800 hover:shadow hover:scale-105 text-black px-4 py-2 rounded-full text-sm transition dark:bg-white dark:text-black dark:hover:bg-gray-200">
+                                    <img src={githubIcon} alt="GitHub Icon" className="w-5 h-5"/>
+                                    See on GitHub
                                 </a>}
                             <span className="ml-auto text-xs text-gray-400 dark:text-gray-500 italic">
                                 Developed: {data.date}
