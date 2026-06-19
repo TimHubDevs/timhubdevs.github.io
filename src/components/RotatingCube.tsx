@@ -13,7 +13,7 @@ export default function RotatingCube() {
                     lg:cube-face-front-lg
                     md:cube-face-front-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="/public/videos/fire.mp4" type="video/mp4"/>
+                        <source src="/videos/fire.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div
@@ -22,7 +22,7 @@ export default function RotatingCube() {
                     lg:cube-face-back-lg
                     md:cube-face-back-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="/public/videos/Across-The-Obelisk.mp4" type="video/mp4"/>
+                        <source src="/videos/Across-The-Obelisk.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div
@@ -31,7 +31,7 @@ export default function RotatingCube() {
                     lg:cube-face-right-lg
                     md:cube-face-right-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="/public/videos/Football.mp4" type="video/mp4"/>
+                        <source src="/videos/Football.mp4" type="video/mp4"/>
                     </video>
                 </div>
                 <div
@@ -40,7 +40,7 @@ export default function RotatingCube() {
                     lg:cube-face-left-lg
                     md:cube-face-left-md">
                     <video autoPlay loop muted playsInline>
-                        <source src="/public/videos/EverMerge.mp4" type="video/mp4"/>
+                        <source src="/videos/EverMerge.mp4" type="video/mp4"/>
                     </video>
                 </div>
             </div>
