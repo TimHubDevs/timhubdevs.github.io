@@ -1,5 +1,4 @@
 import {useEffect, useRef, useState} from 'react';
-import character from "../assets/character.svg";
 
 const BreathingWavesSection = () => {
     const sectionRef = useRef<HTMLElement>(null);
@@ -81,8 +80,8 @@ const BreathingWavesSection = () => {
                     <defs>
                         <linearGradient id="paint0_linear_1311_495" x1="532" y1="0.454102" x2="532" y2="145.678"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#9D8FCA'}} />
-                            <stop offset="1" {...{'stop-color': 'white'}} />
+                            <stop stopColor="#9D8FCA" />
+                            <stop offset="1" stopColor="white" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -94,8 +93,8 @@ const BreathingWavesSection = () => {
                     <defs>
                         <linearGradient id="paint0_linear_1311_496" x1="448" y1="0.652832" x2="448" y2="139.61"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#72659B'}} />
-                            <stop offset="1" {...{'stop-color': 'white'}} />
+                            <stop stopColor="#72659B" />
+                            <stop offset="1" stopColor="white" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -107,8 +106,8 @@ const BreathingWavesSection = () => {
                     <defs>
                         <linearGradient id="paint0_linear_1311_458" x1="379" y1="0.400024" x2="379" y2="138.622"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#402E6B'}} />
-                            <stop offset="1" {...{'stop-color': 'white'}} />
+                            <stop stopColor="#402E6B" />
+                            <stop offset="1" stopColor="white" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -120,8 +119,8 @@ const BreathingWavesSection = () => {
                     <defs>
                         <linearGradient id="paint0_linear_1311_459" x1="329" y1="0.816772" x2="329" y2="107.791"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#402E6B'}} />
-                            <stop offset="1" {...{'stop-color': 'white'}} />
+                            <stop stopColor="#402E6B" />
+                            <stop offset="1" stopColor="white" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -133,8 +132,8 @@ const BreathingWavesSection = () => {
                     <defs>
                         <linearGradient id="paint0_linear_1311_460" x1="255" y1="0.389771" x2="255" y2="74.6184"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#402E6B'}} />
-                            <stop offset="1" {...{'stop-color': 'white'}} />
+                            <stop stopColor="#402E6B" />
+                            <stop offset="1" stopColor="white" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -146,8 +145,8 @@ const BreathingWavesSection = () => {
                         <linearGradient id="paint0_linear_1311_461" x1="190.999" y1="0.0665283" x2="190.999"
                                         y2="42.6119"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#402E6B'}} />
-                            <stop offset="1" {...{'stop-color': 'white'}} />
+                            <stop stopColor="#402E6B" />
+                            <stop offset="1" stopColor="white" />
                         </linearGradient>
                     </defs>
                 </svg>
@@ -159,8 +158,8 @@ const BreathingWavesSection = () => {
                     <defs>
                         <linearGradient id="paint0_linear_1311_462" x1="138" y1="0.75647" x2="138" y2="60.4087"
                                         gradientUnits="userSpaceOnUse">
-                            <stop {...{'stop-color': '#A305EE', 'stop-opacity': '0'}} />
-                            <stop offset="1" {...{'stop-color': '#04F3F4', 'stop-opacity': '0.52'}} />
+                            <stop stopColor="#A305EE" stopOpacity="0" />
+                            <stop offset="1" stopColor="#04F3F4" stopOpacity="0.52" />
                         </linearGradient>
                     </defs>
                 </svg>

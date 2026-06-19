@@ -134,17 +134,6 @@ function App() {
                                 </div>
                             </div>
                         </div>
-                        <div className="order-3 lg:hidden px-8 pb-8">
-                            <div className="logos-wrap">
-                                <h2 className="text-sm font-semibold text-gray-700 mb-4 text-center">Worked with the best</h2>
-                                <ul className="logos flex gap-6 flex-wrap justify-center">
-                                    <li><img src="/logos/ea.png" alt="EA logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                    <li><img src={segaLogo} alt="SEGA logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                    <li><img src="/logos/zynga.png" alt="Zynga logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                    <li><img src="/logos/king.png" alt="King logo" className="h-8 opacity-70 hover:opacity-100 transition"/></li>
-                                </ul>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
