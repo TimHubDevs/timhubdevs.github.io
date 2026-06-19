@@ -108,11 +108,11 @@ function App() {
                                 GAME BREAKER
                                 </span>
                             </h1>
-                            <p>
+                            <p className="whitespace-nowrap">
                                 7 years. Big studios. Real titles. If it exists in your imagination — I'll ship it.
                             </p>
 
-                            <div className="top-buttons">
+                            <div className="top-buttons flex gap-3 justify-center mt-5">
                                 <a className="open-demo" href="https://store.steampowered.com/app/1385380/Across_the_Obelisk/" target="_blank" rel="noopener noreferrer">
                                     <span>Play Latest Game</span>
                                 </a>
